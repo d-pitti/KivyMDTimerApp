@@ -13,7 +13,7 @@ package.domain = org.test
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas
+source.include_exts = py,png,jpg,kv,atlas,txt
 
 # (list) List of inclusions using pattern matching
 #source.include_patterns = assets/*,images/*.png
@@ -37,27 +37,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = Python==3.11.4, Kivy==2.2.1, 
-    kivy-deps.angle==0.3.3, 
-    kivy-deps.glew==0.3.1,
-    kivy-deps.gstreamer==0.3.3,
-    kivy-deps.sdl2==0.6.0,
-    Kivy-examples==2.2.1,
-    Kivy-Garden==0.1.5,
-    kivymd==1.1.1,
-    pexpect==4.9.0,
-    Pillow==10.1.0,
-    platformdirs==4.1.0,
-    plyer==2.1.0,
-    ptyprocess==0.7.0,
-    Pygments==2.17.2,
-    pypiwin32==223,
-    pytube==15.0.0,
-    pywin32==306,
-    requests==2.31.0,
-    sh==2.0.6,
-    urllib3==2.1.0,
-    virtualenv==20.25.0
+requirements = python3==3.11.4,hostpython3==3.11.4, kivy, kivymd, pillow, plyer
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -67,7 +47,7 @@ requirements = Python==3.11.4, Kivy==2.2.1,
 #presplash.filename = %(source.dir)s/data/presplash.png
 
 # (str) Icon of the application
-icon.filename = %(source.dir)s/timer icon.png
+icon.filename = %(source.dir)s/timericon.png
 
 # (list) Supported orientations
 # Valid options are: landscape, portrait, portrait-reverse or landscape-reverse
@@ -121,10 +101,10 @@ fullscreen = 0
 #android.features = android.hardware.usb.host
 
 # (int) Target Android API, should be as high as possible.
-#android.api = 31
+android.api = 31
 
 # (int) Minimum API your APK / AAB will support.
-#android.minapi = 21
+android.minapi = 21
 
 # (int) Android SDK version to use
 #android.sdk = 20
@@ -150,16 +130,16 @@ fullscreen = 0
 # (bool) If True, then skip trying to update the Android sdk
 # This can be useful to avoid excess Internet downloads or save time
 # when an update is due and you just want to test/build your package
-# android.skip_update = False
+android.skip_update = False
 
 # (bool) If True, then automatically accept SDK license
 # agreements. This is intended for automation only. If set to False,
 # the default, you will be shown the license when first running
 # buildozer.
-# android.accept_sdk_license = False
+android.accept_sdk_license = True
 
 # (str) Android entry point, default is ok for Kivy-based app
-#android.entrypoint = org.kivy.android.PythonActivity
+android.entrypoint = org.kivy.android.PythonActivity
 
 # (str) Full name including package path of the Java class that implements Android Activity
 # use that parameter together with android.entrypoint to set custom Java class instead of PythonActivity
