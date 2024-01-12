@@ -1,6 +1,4 @@
 from kivymd.app import MDApp
-from kivymd.uix.floatlayout import MDFloatLayout
-from kivymd.uix.relativelayout import MDRelativeLayout
 from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.uix.anchorlayout import MDAnchorLayout
 from kivy.uix.behaviors import ButtonBehavior
